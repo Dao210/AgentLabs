@@ -1,0 +1,798 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Generate beautiful product images, model images with our easy to use AI Image Generator - No need to do complicated prompts anymore. Get started for free today!">
+    <meta name="author" content="Topzeal.com">
+    <title>Topzeal | More better AI for eCommerce</title>
+    <!-- Preloader -->
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href='{% static "build/img/brand/top32.png" %}' type="image/png">
+    <link rel="stylesheet" href='{% static "build/libs/@fortawesome/fontawesome-free/css/all.min.css" %}'>
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href='{% static "build/css/topzeal.css" %}' id="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-cookies" data-backdrop="false" aria-labelledby="modal-cookies" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-aside left-4 right-4 bottom-4">
+            <div class="modal-content bg-dark-dark">
+                <div class="modal-body">
+                    <!-- Text -->
+                    <p class="text-sm text-white mb-3">
+                        We use cookies so that our AI tools work for you. By using our website, you agree to our use of cookies.
+                    </p>
+                    <!-- Buttons -->
+                    <a href='{% static "build/utility/terms.html" %}' class="btn btn-sm btn-white"  target="_blank">Learn more</a>
+                    <button type="button" class="btn btn-sm btn-primary mr-2" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img alt="Topzeal" src='{% static "build/img/brand/Topzeal.webp" %}' id="navbar-logo">
+            </a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Overview</a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+Services</a>
+                        <div class="dropdown-menu dropdown-menu-single">
+                            <a href= "index.html" class="dropdown-item">Create Your Own Products</a>
+                            <a href="about.html" class="dropdown-item">Sell Your Own Product</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Button -->
+                <a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="login.html">
+                    Get Started For Free
+                </a>
+                <!-- Mobile button -->
+                <div class="d-lg-none text-center">
+                    <a href= "" class="btn btn-block btn-sm btn-warning">See more details</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <section class="slice py-4">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-md-7 col-lg-7 order-md-2 text-center">
+                    <video class="w-100" autoplay loop muted>
+                        <source src='{% static "build/img/svg/illustrations/img2ad.mp4" %}' type="video/mp4" class="img-fluid mw-md-120" alt="dreamai"/>
+                    </video>
+                </div>
+                <div class="col-12 col-md-5 col-lg-5 order-md-1 pr-md-5">
+                    <!-- Heading -->
+                    <h3 class="display-8 text-center text-md-left mb-3">
+                        It's time to
+                    </h3>
+                    <h1 class="display-4 text-center text-md-left mb-3">
+                        amplify your <strong class="text-primary">online business</strong>
+                    </h1>
+                    <!-- Text -->
+                    <p class="lead text-center text-md-left text-muted">
+                        Build and grow your ecommerce brand with premium AI Tools.
+                    </p>
+                    <!-- Buttons -->
+                    <div class="text-center text-md-left mt-5">
+                        <a href= "#waitinglist" class="btn btn-primary btn-icon">
+                            <span class="btn-inner--text">Join waiting list</span>
+                            <span class="btn-inner--icon"><i data-feather="chevron-right"></i></span>
+                        </a>
+                        <a href="" class="btn btn-neutral btn-icon d-none d-lg-inline-block" target="_blank">Watch Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg pt-lg-6 pb-0 pb-lg-6 bg-section-secondary">
+        <div class="container">
+            <!-- Title -->
+            <!-- Section title -->
+            <div class="row mb-5 justify-content-center text-center">
+                <div class="col-lg-12">
+                    <span class="badge badge-soft-success badge-pill badge-lg">
+                        Get started
+                    </span>
+                    <h2 class=" mt-4">Carefuly crafted AI tools ready to power your brand</h2>
+                    <div class="mt-2">
+                        <p class="lead lh-180">An all-in-one platform to lower costs and streamline sourcing, fulfillment, and marketing.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card -->
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card" style="border-radius: 0 0 0.75rem 0.75rem;">
+                        <div>
+                            <div class="pt-0 pb-3">
+                                <img src='{% static "build/img/svg/illustrations/img2model1.webp" %}' class="img-fluid img-center" style="width: 100%;" alt="img2model" />
+                            </div>
+                            <div class="card-body"  style="padding-top: 0.75rem;">
+                            <h5 class="h4 lh-130 mb-3">Generate model images</h5>
+                            <p class="text-muted mb-0">Simply put the garment on a mannequin and you can display the garment with live models of all types that match the brand's tone.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card"  style="border-radius: 0 0 0.75rem 0.75rem;">
+                        <div>
+                            <div class="pt-0 pb-3">
+                                <img src='{% static "build/img/svg/illustrations/custom-tools.jpg" %}' class="img-fluid img-center" style="width: 100%;" alt="custom-tools" />
+                            </div>
+                            <div class="card-body"  style="padding-top: 0.75rem;">
+                            <h5 class="h4 lh-130 mb-3">Unleash you creativity</h5>
+                            <p class="text-muted mb-0">With our free design tools, you can easily add your custom designs to t-shirts, mugs, phone cases, and hundreds of other products.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="border-radius: 0 0 0.75rem 0.75rem;">
+                        <div>
+                            <div class="pt-0 pb-3">
+                                <img src='{% static "build/img/svg/illustrations/audience.jpg" %}' class="img-fluid img-center" style="width:100%;" alt="audience" />
+                            </div>
+                            <div class="card-body"  style="padding-top: 0.75rem;">
+                            <h5 class="h4 lh-130 mb-3">Increase your audience</h5>
+                            <p class="text-muted mb-0">AI production Tools generate fused backgrounds, match graphics to generate posters and explosive marketing copy based on pictures.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice">
+        <div class="container">
+            <div class="py-6">
+                <div class="row row-grid justify-content-between align-items-center">
+                    <div class="col-lg-5 order-lg-2">
+                        <h5 class="h3">Remove Background</h5>
+                        <p class="lead my-4">
+                            Our system, using vast product data, accurately detects edges with AI, ensuring clear, mistake-free results after one-click batch background removal.
+                        </p>
+                        <ul class="list-unstyled mb-0">
+                            <li class="py-2">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                            <i class="fas fa-file-invoice"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="h6 mb-0">Perfect for modern startups</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                            <i class="fas fa-store-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="h6 mb-0">Ready to be customized</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="card mb-0 mr-lg-5">
+                            <div class="card-body p-2">
+                                <img alt="Creators Dashboard" src='{% static "build/img/theme/light/screen-2-1000x800.jpg" %}' class="img-fluid shadow rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-6">
+                <div class="row row-grid justify-content-between align-items-center">
+                    <div class="col-lg-5">
+                        <h5 class="h3">Higher Profits</h5>
+                        <p class="lead my-4">
+                            Benefit from our 10+ years of fully owned production process.
+                        </p>
+                        <ul class="list-unstyled mb-0">
+                            <li class="py-2">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                            <i class="fas fa-file-invoice"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="h6 mb-0">Direct access to the producers (us!) with no middle-men involved</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                            <i class="fas fa-store-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="h6 mb-0">3-step quality process that helps us get it right more than 99% of the time.</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                            <i class="fas fa-store"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="h6 mb-0">Consistent product quality in all 15 fulfillment centers across the globe.</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card mb-0 ml-lg-5">
+                            <div class="card-body p-2">
+                                <img alt="designs" src='{% static "build/img/theme/light/chair.jpg" %}' class="img-fluid shadow rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg bg-section-dark pt-5 pt-lg-8">
+        <!-- SVG separator -->
+        <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class="">
+                <polygon points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <!-- Container -->
+        <div class="container position-relative zindex-100">
+            <div class="col">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 text-center">
+                        <div class="mt-4 mb-6">
+                            <h2 class="h1 text-white">
+                                Are you ready to grow faster?
+                            </h2>
+                            <h4 class="text-white mt-3">Design your dream product with free</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice pt-0">
+        <div class="container position-relative zindex-100">
+            <div class="row">
+                <div class="col-xl-4 col-sm-6 mt-n7">
+                    <div class="card">
+                        <div class="d-flex p-5">
+                            <div>
+                                <span class="badge badge-danger badge-pill">Update</span>
+                            </div>
+                            <div class="pl-4">
+                                <h5 class="lh-130">realistic mockups</h5>
+                                <p class="text-muted mb-0">
+                                    Save time and money on photoshoots with 50+ product images.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 mt-sm-n7">
+                    <div class="card">
+                        <div class="d-flex p-5">
+                            <div>
+                                <span class="badge badge-success badge-pill">promise</span>
+                            </div>
+                            <div class="pl-4">
+                                <h5 class="lh-130">Finalize designs</h5>
+                                <p class="text-muted mb-0">
+                                    Pick the perfect spot and size for your own image.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-12 col-sm-6 mt-xl-n7">
+                    <div class="card">
+                        <div class="d-flex p-5">
+                            <div>
+                                <span class="badge badge-success badge-pill">Done</span>
+                            </div>
+                            <div class="pl-3">
+                                <h5 class="lh-130">Find free clipart</h5>
+                                <p class="text-muted mb-0">
+                                    put the finishing touch on your design with 496+ clipart graphics.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-sm-6">
+                    <div class="card">
+                        <div class="d-flex p-5">
+                            <div>
+                                <span class="badge badge-warning badge-pill">New</span>
+                            </div>
+                            <div class="pl-4">
+                                <h5 class="lh-130">Compose eye-catching messages</h5>
+                                <p class="text-muted mb-0">
+                                    Enhance your text with professional typography, shadows, and arcs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6">
+                    <div class="card">
+                        <div class="d-flex p-5">
+                            <div>
+                                <span class="badge badge-success badge-pill">Tips</span>
+                            </div>
+                            <div class="pl-4">
+                                <h5 class="lh-130">Turn images into crisp designs</h5>
+                                <p class="text-muted mb-0">
+                                    Design made simple with a clean and smart HTML markup.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-12 col-sm-6">
+                    <div class="card">
+                        <div class="d-flex p-5">
+                            <div>
+                                <span class="badge badge-danger badge-pill">Update</span>
+                            </div>
+                            <div class="pl-3">
+                                <h5 class="lh-130">Add colors and graphics</h5>
+                                <p class="text-muted mb-0">
+                                    Pick from 668+ colors and patterns that guarantee high-quality.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <span class="badge badge-primary badge-pill">Key features</span>
+                    <h5 class="lh-180 mt-4 mb-6">Topzeal's powerful platform allows you to start and scale your eCommerce business. Access Topzeal's vetted factory network, creative services network, grow your sales with access to sales tools and services.</h5>
+                </div>
+            </div>
+            <!-- Features -->
+            <div class="row mx-lg-n4">
+                <!-- Features - Col 1 -->
+                <div class="col-lg-4 col-md-6 px-lg-4">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div class="icon icon-shape rounded-circle bg-warning text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="h6">100% Responsive</span>
+                                <p class="text-sm text-muted mb-0">
+                                    Built to be customized.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 px-lg-4">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div class="icon icon-shape rounded-circle bg-primary text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="h6">Based on stable diffusion</span>
+                                <p class="text-sm text-muted mb-0">
+                                    powerful image model.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 px-lg-4">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div class="icon icon-shape rounded-circle bg-danger text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="h6">save your brand time</span>
+                                <p class="text-sm text-muted mb-0">
+                                    Bring a Product to Market in Weeks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 px-lg-4">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div class="icon icon-shape rounded-circle bg-success text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="h6">10+ market tools</span>
+                                <p class="text-sm text-muted mb-0">
+                                    cutting edge marketing tools.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 px-lg-4">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div class="icon icon-shape rounded-circle bg-info text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="h6">3+ design tools</span>
+                                <p class="text-sm text-muted mb-0">
+                                    AI designs, and vetted freelancers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 px-lg-4">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div class="icon icon-shape rounded-circle bg-warning text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="h6">grow revenue</span>
+                                <p class="text-sm text-muted mb-0">
+                                    top 20+ online sales channels.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Features - Col 3 -->
+                <div class="col-lg-4 col-md-6 px-lg-4">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div>
+                                    <div class="icon icon-shape rounded-circle bg-info text-white mr-4">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="h6">get a fulfillment</span>
+                                <p class="text-sm text-muted mb-0">
+                                    10+ years of fully owned process.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 px-lg-4">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div>
+                                    <div class="icon icon-shape rounded-circle bg-danger text-white mr-4">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="h6">Integrated plugins</span>
+                                <p class="text-sm text-muted mb-0">
+                                    and more.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 px-lg-4">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div>
+                                    <div class="icon icon-shape rounded-circle bg-primary text-white mr-4">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="h6">Create designs in minutes</span>
+                                <p class="text-sm text-muted mb-0">
+                                    free tool for making product designs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg bg-section-secondary">
+        <div class="container text-center">
+            <div class="row justify-content-center mb-6">
+                <div class="col-lg-8">
+                    <!-- Title -->
+                    <h2 class="h1 strong-600">
+                        Complete features at your hand
+                    </h2>
+                    <!-- Text -->
+                    <p class="text-muted">
+                        Thousands of creators have already made Topzeal the main tool for starting ecommerce.
+                    </p>
+                </div>
+            </div>
+            <!-- Pricing -->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md">
+                    <div class="card card-pricing text-center px-3 hover-scale-110">
+                        <div class="card-header py-5 border-0 delimiter-bottom">
+                            <div class="h1 text-center mb-0">$<span class="price font-weight-bolder">49</span></div>
+                            <span class="h6 text-muted">Standard License</span>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled text-sm mb-4">
+                                <li class="py-2">1 end product</li>
+                                <li class="py-2">Use for personal or a client</li>
+                                <li class="py-2">Use in a free end product</li>
+                                <li class="py-2">6 months technical support</li>
+                            </ul>
+                            <a href="#" class="btn btn-sm btn-warning hover-translate-y-n3 hover-shadow-lg mb-3">Purchase now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md">
+                    <div class="card card-pricing bg-dark text-center px-3 border-0 hover-scale-110">
+                        <div class="card-header py-5 border-0 delimiter-bottom">
+                            <div class="h1 text-white text-center mb-0">$<span class="price font-weight-bolder">590</span></div>
+                            <span class="h6 text-white">Extended License</span>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled text-white text-sm opacity-8 mb-4">
+                                <li class="py-2">Use for personal or a client</li>
+                                <li class="py-2">Use in a free end product</li>
+                                <li class="py-2">Use in an end product that is <strong class="text-success text-underline--dashed">sold</strong></li>
+                                <li class="py-2">6 months technical support</li>
+                            </ul>
+                            <a href="#" class="btn btn-sm btn-white hover-translate-y-n3 hover-shadow-lg mb-3">Purchase now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 form-join m-auto" id="waitinglist">
+                <form action="{% url 'polls:index' %}" method="post">
+                    {% csrf_token %}
+                    <h1 class="h3 mb-3 fw-normal">Join waiting list</h1>
+                    <div class="form-waiting">
+                      <label for="waitingInput">Email:</label>
+                      <input type="email" class="form-control" id="waitingInput" maxlength=100 placeholder="name@example.com">
+                    </div>
+                    <div class="form-waiting">
+                        <label for="waitingText">My Requirment</label>
+                        <input type="text" class="form-control" id="waitingText" maxlength=1024 placeholder="My Requirment">
+                    </div>
+                
+                    <button class="btn btn-primary w-100 py-2" type="submit" value="waiting">Subscribe</button>
+
+                  </form>
+            </div>
+        </div>
+    </section>
+    <footer class="position-relative" id="footer-main">
+        <div class="footer pt-lg-7 footer-dark bg-dark">
+            <!-- SVG shape -->
+            <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+                <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class=" fill-section-secondary">
+                    <polygon points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+            <!-- Footer -->
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <!-- Theme's logo -->
+                        <a href="index.html">
+                            <img alt="Topzeal" src='{% static "build/img/brand/build.svg" %}' id="footer-logo">
+                        </a>
+                        <!-- Webpixels' mission -->
+                        <p class="mt-4 text-sm opacity-8 pr-lg-4">Topzeal attempts to enable creators to quickly establish an online presence and start selling products, services, content, etc. without getting bogged down in the technical details from scratch.</p>
+                        <!-- Social -->
+                        <ul class="nav mt-4">
+                            <li class="nav-item">
+                                <a class="nav-link pl-0" href="https://dribbble.com/topzeal" target="_blank">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/topzeal target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.instagram.com/topzeal" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.facebook.com/topzeal target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-6 col-sm-4 ml-lg-auto mb-5 mb-lg-0">
+                        <h6 class="heading mb-3">Account</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Billing</a></li>
+                            <li><a href="#">Notifications</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
+                        <h6 class="heading mb-3">About</h6>
+                        <ul class="list-unstyled">
+                            <li><a href= "#">Services</a></li>
+                            <li><a href= "#">Pricing</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
+                        <h6 class="heading mb-3">Company</h6>
+                        <ul class="list-unstyled">
+                            <li><a href= "#">Community</a></li>
+                            <li><a href= "#">Help center</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="divider divider-fade divider-dark my-4">
+                <div class="row align-items-center justify-content-md-between pb-4">
+                    <div class="col-md-6">
+                        <div class="copyright text-sm font-weight-bold text-center text-md-left">
+                            &copy; 2019-2023 <a href= "https://topzeal.com" class="font-weight-bold" target="_blank">Topzeal</a>. All rights reserved
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href= "#">
+                                    Terms
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Privacy
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Cookies
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Core JS  -->
+    <script src='{% static "build/libs/bootstrap/dist/js/bootstrap.bundle.min.js" %}'></script>
+    <script src='{% static "build/libs/svg-injector/dist/svg-injector.min.js" %}'></script>
+    <script src='{% static "build/libs/feather-icons/dist/feather.min.js" %}'></script>
+    <!-- Quick JS -->
+    <script src='{% static "build/js/quick-website.js" %}' ></script>
+    <!-- Feather Icons -->
+    <script>
+        feather.replace({
+            'width': '1em',
+            'height': '1em'
+        })
+    </script>
+</body>
+
+</html>
