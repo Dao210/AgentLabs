@@ -1,0 +1,109 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 科技感色调 */
+    --background: 220 20% 97%; /* 淡蓝灰色背景 */
+    --foreground: 220 70% 10%; /* 深蓝色文字 */
+
+    --card: 220 30% 95%; /* 淡蓝卡片背景 */
+    --card-foreground: 220 70% 10%;
+
+    --primary: 220 100% 50%; /* 鲜艳科技蓝 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 90% 60%; /* 紫色科技感 */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 190 95% 55%; /* 青色强调 */
+    --accent-foreground: 220 70% 10%;
+
+    --muted: 220 10% 90%; /* 淡蓝灰 */
+    --muted-foreground: 220 10% 40%;
+
+    --border: 220 20% 85%;
+    --input: 220 20% 85%;
+    --ring: 220 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glow-effect {
+    @apply relative;
+  }
+  
+  .glow-effect::before {
+    content: "";
+    @apply absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-lg blur opacity-50 group-hover:opacity-75 transition duration-200;
+  }
+
+  .tech-card {
+    @apply relative rounded-xl overflow-hidden p-6 bg-card border border-border/40 backdrop-blur-sm;
+  }
+
+  .tech-card::before {
+    content: "";
+    @apply absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-50;
+  }
+
+  .bg-gradient-blue {
+    @apply bg-gradient-to-r from-primary to-accent;
+  }
+
+  .shine-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shine-effect::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(
+      115deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.1) 30%,
+      transparent 40%
+    );
+    animation: shine 4s infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%);
+    }
+  }
+
+  .animate-glow {
+    animation: glow 3s infinite alternate;
+  }
+
+  @keyframes glow {
+    0% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+}
