@@ -21,7 +21,7 @@ const Header = () => {
               <li><Link to="/" className="text-foreground/80 hover:text-primary transition-colors">首页</Link></li>
               <li><Link to="/dashboard" className="text-foreground/80 hover:text-primary transition-colors">控制台</Link></li>
               <li><Link to="/marketing" className="text-foreground/80 hover:text-primary transition-colors">营销方案</Link></li>
-              <li><a href="#features" className="text-foreground/80 hover:text-primary transition-colors">功能</a></li>
+              <li><a href="aitools.html" className="text-foreground/80 hover:text-primary transition-colors">AI工具集</a></li>
             </ul>
           </nav>
           <Button asChild variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
