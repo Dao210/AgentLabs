@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { 
-  BrainCircuit, 
+  Diamond-plus, 
   Github, 
   Mail, 
   MessageSquare, 
@@ -22,7 +22,7 @@ const Footer = ({ simple = false }: FooterProps) => {
       <footer className="py-6 border-t border-border/40">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <BrainCircuit className="h-5 w-5 text-primary" />
+            <Diamond-plus className="h-5 w-5 text-primary" />
             <span className="font-semibold">驰觅 AI</span>
           </div>
           <div className="text-xs text-foreground/60">
