@@ -39,7 +39,7 @@ const Footer = ({ simple = false }: FooterProps) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2 text-xl font-bold mb-4">
-              <BrainCircuit className="h-6 w-6 text-primary" />
+              <DiamondPlus className="h-6 w-6 text-primary" />
               <span>驰觅 AI</span>
             </Link>
             <p className="text-sm text-foreground/70 mb-6">
