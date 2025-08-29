@@ -8,7 +8,8 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import MarketingPlanGenerator from "./pages/MarketingPlanGenerator";
 import NotFound from "./pages/NotFound";
-
+import DemandPage from "./pages/demand";
+import AiTools from "./pages/aitools";
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -20,6 +21,8 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/marketing" element={<MarketingPlanGenerator />} />
+            <Route path="/demand" element={<DemandPage />} />
+            <Route path="/aitools" element={<AiTools />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
