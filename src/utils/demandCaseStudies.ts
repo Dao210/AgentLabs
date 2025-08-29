@@ -61,14 +61,15 @@ export const demandCaseStudies: DemandCaseStudy[] = [
     analysisDate: "2024-01-15"
   },
   {
-    id: "wedding-seating-planner",
+    id: "5",
     title: "北美婚礼座位安排智能规划工具",
     description: "专为北美婚礼策划设计的AI座位安排工具，解决大型婚宴(100-500人)的复杂座位规划问题，包括家庭关系处理、饮食限制匹配、宾客互动优化等核心需求",
-    demandSource: "北美婚礼市场规模庞大：2024年预计达到$72.4B，平均婚礼规模124人，75%新人表示座位安排是最头痛的问题。Google搜索"wedding seating chart"月均搜索量45万+，"wedding seating plan app"搜索量18万+。Reddit r/weddingplanning社区240万+成员，座位安排话题每周讨论热度TOP3。The Knot调查显示：67%新人花费20+小时在座位安排上，43%因座位问题与家庭成员产生矛盾。",
+    demandSource: "北美婚礼市场规模庞大：2024年预计达到$72.4B，平均婚礼规模124人，75%新人表示座位安排是最头痛的问题。Google搜索 wedding seating chart 月均搜索量45万+，wedding seating plan app 搜索量18万+。Reddit r/weddingplanning社区240万+成员，座位安排话题每周讨论热度TOP3。The Knot调查显示：67%新人花费20+小时在座位安排上，43%因座位问题与家庭成员产生矛盾。",
     userAnalysis: "核心用户：25-35岁准新娘(占决策权78%)、专业婚礼策划师、婚宴场地经理。目标用户特征：高学历、中高收入($75K+)、注重效率、家庭关系复杂、对科技产品接受度高。痛点：1) 家庭离异/重组关系复杂化座位安排；2) 宾客饮食限制、过敏信息匹配困难；3) 文化背景差异导致的座位礼仪冲突；4) 临时变更(宾客取消/增加)调整困难；5) 可视化展示和宾客沟通成本高。",
     currentSupply: "现有解决方案严重不足：1) 传统Excel表格：手动操作繁琐，无法处理复杂关系；2) 通用座位软件：缺乏婚礼特定功能，如伴郎伴娘团特殊安排；3) 纸质图表：无法实时调整，沟通效率低；4) 现有APP功能单一：仅提供基础拖拽功能，无智能推荐；5) 缺乏文化适应性：无法满足北美多元文化婚礼需求(犹太、印度、中式等)；6) 无家庭关系冲突预警机制；7) 无法与RSVP系统、餐饮管理系统集成。",
     feasibility: 88,
     successRate: 74,
-    analysisDate: "2024-12-28"
+    analysisDate: "2024-12-28",
+    tags: ["婚礼", "AI", "座位规划"]
   }
 ];
