@@ -24,9 +24,9 @@ const Header = () => {
             <ul className="flex gap-6 items-center font-bold text-lg">
               <li><Link to="/" className="text-foreground hover:text-primary transition-colors">找需求</Link></li>
               <li className="text-muted-foreground">-&gt;</li>
-              <li><Link to="/building" className="text-foreground hover:text-primary transition-colors">建产品</Link></li>
+              <li><Link to="/building" className="text-foreground hover:text-primary transition-colors">做产品</Link></li>
               <li className="text-muted-foreground">-&gt;</li>
-              <li><Link to="/marketing" className="text-foreground hover:text-primary transition-colors">做营销</Link></li>
+              <li><Link to="/marketing" className="text-foreground hover:text-primary transition-colors">搞营销</Link></li>
               <li className="text-muted-foreground">-&gt;</li>
               <li><Link to="/branding" className="text-foreground hover:text-primary transition-colors">创品牌</Link></li>             
             </ul>
@@ -44,19 +44,19 @@ const Header = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-md border-b border-border/40 py-4 px-6">
+        <div className="md:hidden absolute top-full left-0 w-full backdrop-blur-md border-b border-border/40 py-4 px-6">
           <nav>
             <ul className="flex flex-col gap-4 font-bold text-lg">
               <li><Link to="/demand" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">找需求</Link></li>
-              <li className="text-muted-foreground">-&gt;</li>
+              
               <li><Link to="/building" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">做产品</Link></li>
-              <li className="text-muted-foreground">-&gt;</li>
+              
               <li><Link to="/marketing" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">搞营销</Link></li>
-              <li className="text-muted-foreground">-&gt;</li>
+              
               <li><Link to="/branding" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">创品牌</Link></li>
-              <li className="text-muted-foreground">-&gt;</li>
+              
               <li><Link to="/single-member" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">一人公司</Link></li>
-              <li className="text-muted-foreground">-&gt;</li>
+              
               <li><Link to="/agent-startup" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">智能体创业</Link></li>
             </ul>
           </nav>
