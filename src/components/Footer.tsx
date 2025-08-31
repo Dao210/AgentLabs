@@ -66,12 +66,12 @@ const Footer = ({ simple = false }: FooterProps) => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">功能</h3>
+            <h3 className="text-lg font-semibold mb-4">用驰觅能做什么？</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/dashboard" className="text-foreground/70 hover:text-primary flex items-center gap-2">
+                <Link to="/single-member" className="text-foreground/70 hover:text-primary flex items-center gap-2">
                   <MessageSquare className="h-4 w-4" />
-                  <span>智能对话</span>
+                  <span>一人公司的AI助手</span>
                 </Link>
               </li>
               <li>
@@ -93,9 +93,9 @@ const Footer = ({ simple = false }: FooterProps) => {
             <h3 className="text-lg font-semibold mb-4">资源</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-foreground/70 hover:text-primary flex items-center gap-2">
+                <a href="aitools.html" className="text-foreground/70 hover:text-primary flex items-center gap-2">
                   <ChevronRight className="h-4 w-4" />
-                  <span>使用文档</span>
+                  <span>AI工具导航</span>
                 </a>
               </li>
               <li>

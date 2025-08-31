@@ -25,16 +25,13 @@ const Header = () => {
           <nav>
             <ul className="flex gap-6">
               <li><Link to="/" className="text-foreground/80 hover:text-primary transition-colors">找需求</Link></li>
-              <li><Link to="/single-member" className="text-foreground/80 hover:text-primary transition-colors">一人公司</Link></li>
+              <li><Link to="/building" className="text-foreground/80 hover:text-primary transition-colors">建产品</Link></li>
 
-              <li><Link to="/dashboard" className="text-foreground/80 hover:text-primary transition-colors">控制台</Link></li>
-              <li><Link to="/marketing" className="text-foreground/80 hover:text-primary transition-colors">营销方案</Link></li>
-              <li><a href="aitools.html" className="text-foreground/80 hover:text-primary transition-colors">AI工具集</a></li>
+              <li><Link to="/marketing" className="text-foreground/80 hover:text-primary transition-colors">做营销</Link></li>
+              <li><Link to="/branding" className="text-foreground/80 hover:text-primary transition-colors">创品牌</Link></li>             
             </ul>
           </nav>
-          <Button asChild variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
-            <Link to="/dashboard">开始使用</Link>
-          </Button>
+          
         </div>
 
         <button 
@@ -51,6 +48,8 @@ const Header = () => {
           <nav>
             <ul className="flex flex-col gap-4">
               <li><Link to="/" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">首页</Link></li>
+              <li><Link to="/building" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">做产品</Link></li>
+              <li><Link to="/branding" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">创品牌</Link></li>
               <li><Link to="/single-member" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">一人公司</Link></li>
               <li><Link to="/dashboard" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">控制台</Link></li>
               <li><Link to="/marketing" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">营销方案</Link></li>
