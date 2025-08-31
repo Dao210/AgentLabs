@@ -257,34 +257,48 @@ const DemandPage: React.FC = () => {
                     <div className="w-8 h-8 rounded-full bg-indigo-100 dark:bg-indigo-800 flex items-center justify-center mr-3">
                       <span className="text-indigo-600 dark:text-indigo-300 font-bold">1</span>
                     </div>
-                    分析流程
+                    分析方法
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+               <CardContent>
                   <ol className="space-y-3">
                     <li className="flex items-start">
                       <div className="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-800 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                        <span className="text-xs font-bold text-indigo-600 dark:text-indigo-300">1</span>
+                        <span className="text-xs font-bold text-indigo-600 dark:text-indigo-300">
+                          <Search className="h-4 w-4 text-rose-600 dark:text-rose-300" />
+                        </span>
                       </div>
-                      <span className="text-sm">输入产品需求或概念</span>
+                      <div>
+                        <span className="text-sm font-medium">输入产品需求或概念</span>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">明确您想要分析的产品、服务或创意概念</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-800 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                         <span className="text-xs font-bold text-indigo-600 dark:text-indigo-300">2</span>
                       </div>
-                      <span className="text-sm">AI智能分析市场数据</span>
+                      <div>
+                        <span className="text-sm font-medium">AI智能分析市场数据</span>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">利用AI技术深度挖掘市场趋势和用户需求</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-800 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                         <span className="text-xs font-bold text-indigo-600 dark:text-indigo-300">3</span>
                       </div>
-                      <span className="text-sm">生成多维度评估报告</span>
+                      <div>
+                        <span className="text-sm font-medium">生成多维度评估报告</span>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">从技术、市场、竞争等多角度进行全面评估</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-800 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                         <span className="text-xs font-bold text-indigo-600 dark:text-indigo-300">4</span>
                       </div>
-                      <span className="text-sm">获得可行性建议</span>
+                      <div>
+                        <span className="text-sm font-medium">计算可行性和成功率分数</span>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">基于供需对比数据，拟合计算得出评估结果</p>
+                      </div>
                     </li>
                   </ol>
                 </CardContent>
