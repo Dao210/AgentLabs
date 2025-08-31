@@ -255,7 +255,9 @@ const DemandPage: React.FC = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center text-indigo-700 dark:text-indigo-300">
                     <div className="w-8 h-8 rounded-full bg-indigo-100 dark:bg-indigo-800 flex items-center justify-center mr-3">
-                      <span className="text-indigo-600 dark:text-indigo-300 font-bold">1</span>
+                      <span className="text-indigo-600 dark:text-indigo-300 font-bold">
+                        <Search className="h-4 w-4 text-rose-600 dark:text-rose-300" />
+                      </span>
                     </div>
                     分析方法
                   </CardTitle>
@@ -265,7 +267,7 @@ const DemandPage: React.FC = () => {
                     <li className="flex items-start">
                       <div className="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-800 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                         <span className="text-xs font-bold text-indigo-600 dark:text-indigo-300">
-                          <Search className="h-4 w-4 text-rose-600 dark:text-rose-300" />
+                          1
                         </span>
                       </div>
                       <div>
