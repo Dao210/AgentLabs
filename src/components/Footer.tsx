@@ -75,9 +75,9 @@ const Footer = ({ simple = false }: FooterProps) => {
                 </Link>
               </li>
               <li>
-                <Link to="/dashboard" className="text-foreground/70 hover:text-primary flex items-center gap-2">
+                <Link to="/agent-startup" className="text-foreground/70 hover:text-primary flex items-center gap-2">
                   <PenTool className="h-4 w-4" />
-                  <span>营销方案生成</span>
+                  <span>智能体创业四步法</span>
                 </Link>
               </li>
               <li>

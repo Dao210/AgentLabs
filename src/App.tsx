@@ -13,6 +13,7 @@ import AiTools from "./pages/aitools";
 import BuildingPage from "./pages/building";
 import BrandingPage from "./pages/branding";
 import Index from "./pages/single-member";
+import AgentStartupPage from "./pages/agent-startup";
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -26,8 +27,9 @@ const App = () => {
             <Route path="/marketing" element={<MarketingPlanGenerator />} />
             <Route path="/single-member" element={<SingleMember />} />
             <Route path="/aitools" element={<AiTools />} />
-            <Route path="/building" element={<BuildingPage />} />
+          <Route path="/building" element={<BuildingPage />} />
           <Route path="/branding" element={<BrandingPage />} />
+          <Route path="/agent-startup" element={<AgentStartupPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
           </Routes>
