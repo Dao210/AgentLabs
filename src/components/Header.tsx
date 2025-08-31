@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  
   return (
     <header className="w-full py-4 px-6 md:px-10 bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-md border-b border-border/40 fixed top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -19,19 +21,50 @@ const Header = () => {
           <span>驰觅</span>
         </Link>
         
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center justify-center flex-1">
           <nav>
-            <ul className="flex gap-6 items-center font-bold text-lg">
-              <li><Link to="/" className="text-foreground hover:text-primary transition-colors">找需求</Link></li>
-              <li className="text-muted-foreground">-&gt;</li>
-              <li><Link to="/building" className="text-foreground hover:text-primary transition-colors">做产品</Link></li>
-              <li className="text-muted-foreground">-&gt;</li>
-              <li><Link to="/marketing" className="text-foreground hover:text-primary transition-colors">搞营销</Link></li>
-              <li className="text-muted-foreground">-&gt;</li>
-              <li><Link to="/branding" className="text-foreground hover:text-primary transition-colors">创品牌</Link></li>             
+            <ul className="flex gap-2 items-center font-bold text-lg">
+              <li>
+                <Link 
+                  to="/" 
+                  className={`px-4 py-2 rounded-lg text-foreground transition-colors ${location.pathname === '/' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                  onClick={() => window.location.pathname === '/' && window.location.reload()}
+                >
+                  找需求
+                </Link>
+              </li>
+              <li className="text-muted-foreground">&gt;</li>
+              <li>
+                <Link 
+                  to="/building" 
+                  className={`px-4 py-2 rounded-lg text-foreground transition-colors ${location.pathname === '/building' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                  onClick={() => window.location.pathname === '/building' && window.location.reload()}
+                >
+                  做产品
+                </Link>
+              </li>
+              <li className="text-muted-foreground">&gt;</li>
+              <li>
+                <Link 
+                  to="/marketing" 
+                  className={`px-4 py-2 rounded-lg text-foreground  transition-colors ${location.pathname === '/marketing' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                  onClick={() => window.location.pathname === '/marketing' && window.location.reload()}
+                >
+                  搞营销
+                </Link>
+              </li>
+              <li className="text-muted-foreground">&gt;</li>
+              <li>
+                <Link 
+                  to="/branding" 
+                  className={`px-4 py-2 rounded-lg text-foreground  transition-colors ${location.pathname === '/branding' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                  onClick={() => window.location.pathname === '/branding' && window.location.reload()}
+                >
+                  创品牌
+                </Link>
+              </li>
             </ul>
           </nav>
-          
         </div>
 
         <button 
@@ -46,18 +79,66 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border/40 py-4 px-6">
           <nav>
-            <ul className="flex flex-col gap-4 font-bold text-lg">
-              <li><Link to="/demand" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">找需求</Link></li>
+            <ul className="flex flex-col gap-2 font-medium text-lg">
+              <li>
+                <Link 
+                  to="/demand" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/demand' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                >
+                  找需求
+                </Link>
+              </li>
               
-              <li><Link to="/building" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">做产品</Link></li>
+              <li>
+                <Link 
+                  to="/building" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/building' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                >
+                  做产品
+                </Link>
+              </li>
               
-              <li><Link to="/marketing" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">搞营销</Link></li>
+              <li>
+                <Link 
+                  to="/agent-startup" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/agent-startup' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                >
+                  智能体创业
+                </Link>
+              </li>
               
-              <li><Link to="/branding" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">创品牌</Link></li>
+              <li>
+                <Link 
+                  to="/marketing" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/marketing' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                >
+                  搞营销
+                </Link>
+              </li>
               
-              <li><Link to="/single-member" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">一人公司</Link></li>
+              <li>
+                <Link 
+                  to="/branding" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/branding' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                >
+                  创品牌
+                </Link>
+              </li>
               
-              <li><Link to="/agent-startup" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">智能体创业</Link></li>
+              <li>
+                <Link 
+                  to="/single-member" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/single-member' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                >
+                  一人公司
+                </Link>
+              </li>
             </ul>
           </nav>
           <Button asChild variant="outline" className="mt-4 w-full border-primary/50 text-primary hover:bg-primary/10">
