@@ -18,10 +18,10 @@ const App = () => {
       <BrowserRouter>
         <TooltipProvider>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<DemandPage />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/marketing" element={<MarketingPlanGenerator />} />
-            <Route path="/demand" element={<DemandPage />} />
+            <Route path="/single-member" element={<Index />} />
             <Route path="/aitools" element={<AiTools />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

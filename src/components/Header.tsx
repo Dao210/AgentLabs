@@ -24,8 +24,8 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-6">
           <nav>
             <ul className="flex gap-6">
-              <li><Link to="/" className="text-foreground/80 hover:text-primary transition-colors">一人公司</Link></li>
-              <li><Link to="/demand" className="text-foreground/80 hover:text-primary transition-colors">找需求</Link></li>
+              <li><Link to="/" className="text-foreground/80 hover:text-primary transition-colors">找需求</Link></li>
+              <li><Link to="/single-member" className="text-foreground/80 hover:text-primary transition-colors">一人公司</Link></li>
 
               <li><Link to="/dashboard" className="text-foreground/80 hover:text-primary transition-colors">控制台</Link></li>
               <li><Link to="/marketing" className="text-foreground/80 hover:text-primary transition-colors">营销方案</Link></li>
@@ -51,6 +51,7 @@ const Header = () => {
           <nav>
             <ul className="flex flex-col gap-4">
               <li><Link to="/" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">首页</Link></li>
+              <li><Link to="/single-member" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">一人公司</Link></li>
               <li><Link to="/dashboard" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">控制台</Link></li>
               <li><Link to="/marketing" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">营销方案</Link></li>
               <li><a href="#features" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors">功能</a></li>
