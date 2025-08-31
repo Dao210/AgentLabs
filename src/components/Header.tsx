@@ -44,7 +44,7 @@ const Header = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full backdrop-blur-md border-b border-border/40 py-4 px-6">
+        <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border/40 py-4 px-6">
           <nav>
             <ul className="flex flex-col gap-4 font-bold text-lg">
               <li><Link to="/demand" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-primary transition-colors">找需求</Link></li>
