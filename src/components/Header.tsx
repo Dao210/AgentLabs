@@ -57,7 +57,7 @@ const Header = () => {
               <li>
                 <Link 
                   to="/branding" 
-                  className={`px-4 py-2 rounded-lg text-foreground  transition-colors ${location.pathname === '/branding' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                  className={`px-4 py-2 rounded-lg text-foreground transition-colors ${location.pathname === '/branding' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
                   onClick={() => window.location.pathname === '/branding' && window.location.reload()}
                 >
                   创品牌
