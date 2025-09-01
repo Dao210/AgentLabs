@@ -82,7 +82,7 @@ const Header = () => {
             <ul className="flex flex-col gap-2 font-medium text-lg">
               <li>
                 <Link 
-                  to="/demand" 
+                  to="/" 
                   onClick={() => setIsMenuOpen(false)} 
                   className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/demand' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
                 >
@@ -100,15 +100,7 @@ const Header = () => {
                 </Link>
               </li>
               
-              <li>
-                <Link 
-                  to="/agent-startup" 
-                  onClick={() => setIsMenuOpen(false)} 
-                  className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/agent-startup' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
-                >
-                  智能体创业
-                </Link>
-              </li>
+              
               
               <li>
                 <Link 
@@ -137,6 +129,15 @@ const Header = () => {
                   className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/single-member' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
                 >
                   一人公司
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/agent-startup" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/agent-startup' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                >
+                  智能体创业
                 </Link>
               </li>
             </ul>
