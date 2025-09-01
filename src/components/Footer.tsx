@@ -69,19 +69,13 @@ const Footer = ({ simple = false }: FooterProps) => {
             <h3 className="text-lg font-semibold mb-4">用驰觅能做什么？</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/single-member" className="text-foreground/70 hover:text-primary flex items-center gap-2" onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}>
+                <Link to="/single-member" target="_blank" className="text-foreground/70 hover:text-primary flex items-center gap-2">
                   <MessageSquare className="h-4 w-4" />
                   <span>一人公司的AI助手</span>
                 </Link>
               </li>
               <li>
-                <Link to="/agent-startup" className="text-foreground/70 hover:text-primary flex items-center gap-2" onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}>
+                <Link to="/agent-startup" target="_blank" className="text-foreground/70 hover:text-primary flex items-center gap-2">
                   <PenTool className="h-4 w-4" />
                   <span>智能体创业四步法</span>
                 </Link>
@@ -111,7 +105,7 @@ const Footer = ({ simple = false }: FooterProps) => {
                 </a>
               </li>
               <li>
-                <a href="/building" className="text-foreground/70 hover:text-primary flex items-center gap-2" onClick={(e) => {
+                <a href="" className="text-foreground/70 hover:text-primary flex items-center gap-2" onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}>
