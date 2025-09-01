@@ -16,7 +16,7 @@ const OneDollarPage = () => {
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
       
-      <main className="flex-1">
+      <main className="flex-1 pt-20">
         <div className="container max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
           {/* SEO优化的标题和描述 */}
           <div className="mb-8 text-center">

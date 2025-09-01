@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://chimi.ai/sitemap.xml
+Sitemap: https://chimii.com/sitemap.xml
