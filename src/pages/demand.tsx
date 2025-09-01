@@ -312,7 +312,7 @@ const DemandPage: React.FC = () => {
                     <div className="w-8 h-8 rounded-full bg-rose-100 dark:bg-rose-800 flex items-center justify-center mr-3">
                       <Database className="h-4 w-4 text-rose-600 dark:text-rose-300" />
                     </div>
-                    数据来源
+                    需求来源
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -334,8 +334,8 @@ const DemandPage: React.FC = () => {
                     <div className="flex items-center p-3 bg-white/50 dark:bg-black/20 rounded-lg">
                       <ShoppingCart className="h-5 w-5 text-rose-500 mr-3" />
                       <div>
-                        <div className="font-medium text-sm">电商平台</div>
-                        <div className="text-xs text-rose-600 dark:text-rose-400">产品需求反馈</div>
+                        <div className="font-medium text-sm">支付渠道</div>
+                        <div className="text-xs text-rose-600 dark:text-rose-400">通过stripe等支付网关反向找需求</div>
                       </div>
                     </div>
                     <div className="flex items-center p-3 bg-white/50 dark:bg-black/20 rounded-lg">

@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { CheckCircle2, BrainCircuit } from "lucide-react";
 
-const Index = () => {
+const SingleMemberPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -86,4 +86,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default SingleMemberPage;

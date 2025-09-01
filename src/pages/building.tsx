@@ -12,31 +12,35 @@ const BuildingPage: React.FC = () => {
   const steps = [
     {
       id: 1,
-      title: "发现痛点",
-      description: "识别真实存在的问题和需求",
+      title: "技术选型",
+      description: "选择合适的技术栈",
       icon: Lightbulb,
-      details: "通过观察、调研和数据分析，发现用户在日常生活或工作中遇到的真实问题。一个好的产品始于对痛点的深刻理解。"
+      details: "根据项目需求和目标，选择合适的技术栈。考虑技术的成熟度、社区支持、性能和成本等因素。",
+      moredetails:"考虑到项目的时间和资源限制，建议使用react和nextjs完成第一版开发。react是一个流行的前端框架，nextjs是一个基于react的服务端渲染框架。v0.dev是一个基于nextjs的开发平台，提供了快速搭建应用的功能。"
     },
     {
       id: 2,
       title: "验证需求",
       description: "确认问题的普遍性和重要性",
       icon: Target,
-      details: "通过用户访谈、问卷调查等方式，验证你发现的问题是否具有普遍性，以及用户是否愿意为此付费解决。"
+      details: "通过用户访谈、问卷调查等方式，验证你发现的问题是否具有普遍性，以及用户是否愿意为此付费解决。",
+      moredetails:"考虑到项目的时间和资源限制，建议使用用户访谈和问卷调查的方式验证需求。用户访谈可以直接与用户进行对话，了解他们的需求和问题。问卷调查则可以通过发送邮件、社交媒体等方式，收集用户的反馈。"
     },
     {
       id: 3,
       title: "构思方案",
       description: "设计解决问题的产品方案",
       icon: Wrench,
-      details: "基于对痛点的理解，构思创新的解决方案。考虑技术可行性、成本控制和用户体验，设计出简洁有效的产品原型。"
+      details: "基于对痛点的理解，构思创新的解决方案。考虑技术可行性、成本控制和用户体验，设计出简洁有效的产品原型。",
+      moredetails:"考虑到项目的时间和资源限制，建议使用v0.dev等工具快速搭建产品原型。v0.dev是一个基于nextjs的开发平台，提供了快速搭建应用的功能。考虑到项目的规模和复杂度，建议使用v0.dev搭建产品原型。"  
     },
     {
       id: 4,
       title: "快速验证",
       description: "用最小成本测试产品概念",
       icon: Rocket,
-      details: "制作MVP（最小可行产品），快速推向市场进行测试。收集用户反馈，验证产品是否真正解决了用户问题。"
+      details: "制作MVP（最小可行产品），快速推向市场进行测试。收集用户反馈，验证产品是否真正解决了用户问题。",
+      moredetails:"考虑到项目的时间和资源限制，建议使用用户访谈和问卷调查的方式验证需求。用户访谈可以直接与用户进行对话，了解他们的需求和问题。问卷调查则可以通过发送邮件、社交媒体等方式，收集用户的反馈。"
     }
   ];
 
@@ -72,7 +76,7 @@ const BuildingPage: React.FC = () => {
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">做产品</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              从发现痛点到验证需求，掌握产品开发的核心方法论
+              从零开始做应用，掌握产品开发的核心方法论
             </p>
           </div>
           
@@ -115,7 +119,7 @@ const BuildingPage: React.FC = () => {
                   当前步骤详情
                 </h3>
                 <div className="prose max-w-none">
-                  <p>{steps[activeStep].details}</p>
+                  <p>{steps[activeStep].moredetails}</p>
                 </div>
               </div>
             </CardContent>

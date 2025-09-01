@@ -69,13 +69,19 @@ const Footer = ({ simple = false }: FooterProps) => {
             <h3 className="text-lg font-semibold mb-4">用驰觅能做什么？</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/single-member" className="text-foreground/70 hover:text-primary flex items-center gap-2">
+                <Link to="/single-member" className="text-foreground/70 hover:text-primary flex items-center gap-2" onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}>
                   <MessageSquare className="h-4 w-4" />
                   <span>一人公司的AI助手</span>
                 </Link>
               </li>
               <li>
-                <Link to="/agent-startup" className="text-foreground/70 hover:text-primary flex items-center gap-2">
+                <Link to="/agent-startup" className="text-foreground/70 hover:text-primary flex items-center gap-2" onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}>
                   <PenTool className="h-4 w-4" />
                   <span>智能体创业四步法</span>
                 </Link>
@@ -93,22 +99,25 @@ const Footer = ({ simple = false }: FooterProps) => {
             <h3 className="text-lg font-semibold mb-4">资源</h3>
             <ul className="space-y-3">
               <li>
-                <a href="aitools.html" className="text-foreground/70 hover:text-primary flex items-center gap-2">
+                <a href="aitools.html" target="_blank" className="text-foreground/70 hover:text-primary flex items-center gap-2">
                   <ChevronRight className="h-4 w-4" />
                   <span>AI工具导航</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="text-foreground/70 hover:text-primary flex items-center gap-2">
+                <a href="/onedollar" target="_blank" className="text-foreground/70 hover:text-primary flex items-center gap-2">
                   <ChevronRight className="h-4 w-4" />
-                  <span>常见问题</span>
+                  <span>我是如何赚得第一个一美元的</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="text-foreground/70 hover:text-primary flex items-center gap-2">
-                  <ChevronRight className="h-4 w-4" />
-                  <span>用户案例</span>
-                </a>
+                <a href="/building" className="text-foreground/70 hover:text-primary flex items-center gap-2" onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}>
+              <ChevronRight className="h-4 w-4" />
+              <span>用户案例</span>
+            </a>
               </li>
             </ul>
           </div>
@@ -133,8 +142,14 @@ const Footer = ({ simple = false }: FooterProps) => {
             © {currentYear} 驰觅科技. 保留所有权利.
           </div>
           <div className="flex gap-6">
-            <Link to="#" className="text-sm text-foreground/60 hover:text-foreground">隐私政策</Link>
-            <Link to="#" className="text-sm text-foreground/60 hover:text-foreground">服务条款</Link>
+            <Link to="#" className="text-sm text-foreground/60 hover:text-foreground" onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}>隐私政策</Link>
+            <Link to="#" className="text-sm text-foreground/60 hover:text-foreground" onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}>服务条款</Link>
           </div>
         </div>
       </div>

@@ -140,6 +140,15 @@ const Header = () => {
                   智能体创业
                 </Link>
               </li>
+              <li>
+                <Link 
+                  to="/onedollar" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className={`block px-4 py-3 rounded-lg text-foreground hover:text-primary transition-colors ${location.pathname === '/onedollar' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/10'}`}
+                >
+                  第一个一美元
+                </Link>
+              </li>
             </ul>
           </nav>
           <Button asChild variant="outline" className="mt-4 w-full border-primary/50 text-primary hover:bg-primary/10">
