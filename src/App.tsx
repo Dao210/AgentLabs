@@ -10,7 +10,8 @@ import DemandPage from "./pages/demand";
 import AiTools from "./pages/aitools";
 import BuildingPage from "./pages/building";
 import BrandingPage from "./pages/branding";
-import SingleMemberPage from "./pages/single-member";
+// 检查文件路径是否正确，推测可能是文件扩展名缺失，尝试添加 .tsx 扩展名
+import SingleMemberPage from "./pages/single-member.tsx";
 import AgentStartupPage from "./pages/agent-startup";
 import OneDollarPage from "./pages/onedollar";
 const queryClient = new QueryClient();
