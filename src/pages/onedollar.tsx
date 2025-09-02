@@ -169,10 +169,10 @@ const OneDollarPage = () => {
               坚持学习，持续改进，你的第一个一美元也会到来。
             </p>
             <Button asChild variant="outline">
-              <a href="/building">
+              <Link to="/building">
                 了解更多创业经验
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
