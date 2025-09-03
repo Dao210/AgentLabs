@@ -320,8 +320,8 @@ const DemandPage: React.FC = () => {
                     <div className="flex items-center p-3 bg-white/50 dark:bg-black/20 rounded-lg">
                       <TrendingUp className="h-5 w-5 text-rose-500 mr-3" />
                       <div>
-                        <div className="font-medium text-sm">Google Trends</div>
-                        <div className="text-xs text-rose-600 dark:text-rose-400">搜索趋势分析</div>
+                        <div className="font-medium text-sm">关键词增长率KGR（Keyword Growth Rate）</div>
+                        <div className="text-xs text-rose-600 dark:text-rose-400">百度指数、谷歌趋势Google Trends等搜索趋势分析</div>
                       </div>
                     </div>
                     <div className="flex items-center p-3 bg-white/50 dark:bg-black/20 rounded-lg">

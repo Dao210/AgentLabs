@@ -13,6 +13,20 @@ export interface DemandCaseStudy {
 
 export const demandCaseStudies: DemandCaseStudy[] = [
   {
+    id: 7,
+    title: "Nano Banana",
+    description: "图像处理工具，以nano banana为宣传卖点",
+    tags: ["图像处理", "AI"],
+    demandSource: "用户需要一个简单易用的图像处理工具，能够满足基本的编辑需求，如调整亮度、对比度、锐化等。",
+    userAnalysis: "目标用户是普通用户，他们需要一个简单易用的图像处理工具，满足有趣的简单的图形处理需求。",
+    currentSupply: "nano本身是很好的工具，如何抓住用户需求，如何将nano的功能进行扩展，如何满足用户的需求。",
+    feasibility: 200,
+    successRate: 70,
+    analysisDate: "2025-09-01",
+    googletrends: '8800',
+    pageresults: '41.60M'
+  },
+  {
     id: "6",
     title: "PBL教案",
     description: "打造一个以项目式学习(PBL)为核心，AI技术为支撑的青少年学习平台，帮助学生发展核心素养，培养创造力、批判性思维、沟通与协作能力，适应AI时代的学习与成长需求。平台通过真实问题导向的项目设计，结合AI个性化指导，实现跨学科知识整合与实际应用。",
@@ -40,17 +54,17 @@ export const demandCaseStudies: DemandCaseStudy[] = [
   },
   {
     id: 2,
-    title: "个性化音乐生成器",
+    title: "AI Music Generator",
     description: "基于AI技术的个性化音乐生成器，用户可以根据心情、场景生成专属音乐。",
     demandSource: "随着AI技术的发展，用户对个性化内容的需求增加，特别是在音乐领域。",
     userAnalysis: "目标用户是音乐爱好者、内容创作者和需要背景音乐的视频制作者。",
     currentSupply: "目前市场上有一些AI音乐生成工具，但个性化程度和易用性有待提高。",
-    feasibility: 70,
-    successRate: 65,
+    feasibility: 0.4,
+    successRate: 6,
     analysisDate: "2025-10-16",
     tags: ["音乐", "AI", "娱乐"],
-    googletrends: '100',
-    pageresults: '60M'
+    googletrends: '1800',
+    pageresults: '4180M'
   },
   {
     id: 3,
