@@ -9,6 +9,10 @@ export interface DemandCaseStudy {
   feasibility: number; // 0-100分
   successRate: number; // 0-100分
   analysisDate: string; // YYYY-MM-DD格式
+  image?: string; // 图片文件名
+  imgdesc?: string; // 图片描述
+  googletrends: number; // Google趋势数据
+  pageresults?: string; // 页面结果数据
 }
 
 export const demandCaseStudies: DemandCaseStudy[] = [
@@ -24,10 +28,12 @@ export const demandCaseStudies: DemandCaseStudy[] = [
     successRate: 70,
     analysisDate: "2025-09-01",
     googletrends: '8800',
-    pageresults: '41.60M'
+    pageresults: '41.60M',
+    image: 'nano tutorial20250905.png',
+    imgdesc: 'nano tutorial的详细需求分析',
   },
   {
-    id: "6",
+    id: 6,
     title: "PBL教案",
     description: "打造一个以项目式学习(PBL)为核心，AI技术为支撑的青少年学习平台，帮助学生发展核心素养，培养创造力、批判性思维、沟通与协作能力，适应AI时代的学习与成长需求。平台通过真实问题导向的项目设计，结合AI个性化指导，实现跨学科知识整合与实际应用。",
     demandSource: "随着AI技术的快速发展，传统教育模式已无法满足新时代人才培养需求。教育部《义务教育课程标准(2022年版)》明确提出培养学生核心素养的重要性。调研显示，85%的教师认为PBL是培养学生21世纪技能的有效方式，但70%的学校缺乏实施PBL的有效工具和平台支持。",
@@ -81,7 +87,7 @@ export const demandCaseStudies: DemandCaseStudy[] = [
     pageresults: '6.78M'
   },
   {
-    id: "5",
+    id: 5,
     title: "北美婚礼座位安排智能规划工具",
     description: "专为北美婚礼策划设计的AI座位安排工具，解决大型婚宴(100-500人)的复杂座位规划问题，包括家庭关系处理、饮食限制匹配、宾客互动优化等核心需求",
     demandSource: "北美婚礼市场规模庞大：2024年预计达到$72.4B，平均婚礼规模124人，75%新人表示座位安排是最头痛的问题。Google搜索 wedding seating chart 月均搜索量45万+，wedding seating plan app 搜索量18万+。Reddit r/weddingplanning社区240万+成员，座位安排话题每周讨论热度TOP3。The Knot调查显示：67%新人花费20+小时在座位安排上，43%因座位问题与家庭成员产生矛盾。",

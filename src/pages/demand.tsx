@@ -366,6 +366,23 @@ const DemandPage: React.FC = () => {
                   {demandCaseStudies.map((caseStudy: DemandCaseStudy) => (
                     <div key={caseStudy.id} className="group bg-white dark:bg-gray-800/50 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 hover:shadow-xl hover:shadow-purple-100/50 dark:hover:shadow-purple-900/20">
                       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6">
+                        {/* 案例图片展示 */}
+                        {caseStudy.image && (
+                          <div className="lg:w-1/3 mb-4 lg:mb-0 lg:mr-6 flex-shrink-0">
+                            <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm">
+                              <img 
+                                src={`/${caseStudy.image}`} 
+                                alt={caseStudy.imgdesc || caseStudy.title}
+                                className="w-full h-auto object-cover"
+                              />
+                              {caseStudy.imgdesc && (
+                                <div className="p-2 bg-gray-50 dark:bg-gray-800 text-xs text-center text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700">
+                                  {caseStudy.imgdesc}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        )}
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-3">
                             <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors">
