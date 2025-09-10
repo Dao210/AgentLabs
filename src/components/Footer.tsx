@@ -90,7 +90,7 @@ const Footer = ({ simple = false }: FooterProps) => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">资源</h3>
+            <h3 className="text-lg font-semibold mb-4">工具资源</h3>
             <ul className="space-y-3">
               <li>
                 <a href="aitools.html" target="_blank" className="text-foreground/70 hover:text-primary flex items-center gap-2">
@@ -99,16 +99,16 @@ const Footer = ({ simple = false }: FooterProps) => {
                 </a>
               </li>
               <li>
-                <Link to="/onedollar" className="text-foreground/70 hover:text-primary flex items-center gap-2">
+                <a href="https://www.nanobanana.fans/" target="_blank" rel="dofollow" className="text-foreground/70 hover:text-primary flex items-center gap-2">
                   <ChevronRight className="h-4 w-4" />
-                  <span>我是如何赚得第一个一美元的</span>
-                </Link>
+                  <span>nano banana prompts</span>
+                </a>
               </li>
               <li>
-                <a href="" className="text-foreground/70 hover:text-primary flex items-center gap-2" >
-              <ChevronRight className="h-4 w-4" />
-              <span>用户案例</span>
-            </a>
+                <a href="https://www.xcalculator.art/" target="_blank" rel="dofollow" className="text-foreground/70 hover:text-primary flex items-center gap-2">
+                  <ChevronRight className="h-4 w-4" />
+                  <span>grow a garden calculator</span>
+                </a>
               </li>
             </ul>
           </div>
